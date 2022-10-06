@@ -12,7 +12,7 @@ impl Message {
         match bincode::deserialize::<Message>(&bytes) {
             Ok(deserialized) => Some(deserialized),
             Err(_e) => {
-                warn!("Error deserializing bytes!");
+                warn!("Error deserializing bytes");
                 None
             }
         }
