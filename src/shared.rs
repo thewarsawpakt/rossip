@@ -18,7 +18,7 @@ impl Message {
             }
         }
     }
-    #[allow(dead_code)] // I haven't implemented this yet but I want the warning out of my face
+    #[allow(dead_code)] // I haven't used this yet but I want the warning out of my face
     pub fn to_bytes(&mut self) -> Option<Vec<u8>> {
         match bincode::serialize(self) {
             Ok(serialized) => Some(serialized),
