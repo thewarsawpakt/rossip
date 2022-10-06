@@ -1,0 +1,2 @@
+# Rossip
+Rossip is a gossip protocol implementation in Rust. Rossip uses [tokio](https://crates.io/crates/tokio), [clap](https://crates.io/crates/clap), [bincode](https://crates.io/crates/bincode), [serde](https://crates.io/crates/serde), [env_logger](https://crates.io/crates/env_logger), and [log](https://crates.io/crates/log). 
