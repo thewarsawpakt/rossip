@@ -1,5 +1,6 @@
-use log::warn;
 use serde::{Deserialize, Serialize};
+use std::cmp::Ordering;
+use log::warn;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Message {
@@ -26,5 +27,17 @@ impl Message {
                 None
             }
         }
+    }
+}
+
+impl PartialEq for Message {
+    fn eq(&self, other: &Self) -> bool {
+        return self.version == other.version
+    }
+}
+
+impl PartialOrd for Message {
+    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
+        return Some(self.version.cmp(&other.version))
     }
 }
